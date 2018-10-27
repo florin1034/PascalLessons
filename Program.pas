@@ -1,8 +1,15 @@
 Program Lesson1_Program1;
 {     equation ax^2+bx+c=0 }
-Procedure  EquationGradeTwo(a,b,c: real);
-    var delta, x1,x2: real;
+Procedure  EquationGradeTwo();
+    var delta, x1,x2,a,b,c: real;
 begin
+    {Read coeficients a,b,c}
+    writeln('Write a');
+    Readln(a);
+    writeln('Write b');
+    readln(b);
+    writeln('Write c');
+    readln(c);
     if(a=0) then
     begin
        if(b=0) then begin
@@ -41,6 +48,6 @@ Begin
     { Example of using factorial function}
     a := fact(5);
     writeln(a);
-          EquationGradeTwo(2,10,12);
+          EquationGradeTwo();
 	Readln;
 End.
