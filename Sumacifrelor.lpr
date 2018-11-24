@@ -18,7 +18,9 @@ Begin
    writeln('Suma este ',S);
 
 
+   { Se citesc n numere natural. Pe ce pozitii se gasesc numerele prime?
 
+Citește mai mult: https://infoliceu.webnode.com/clasa-a-x-a-pascal/vectori/probleme-rezolvate/}
 
 
 
