@@ -2,8 +2,20 @@ program PozitiiPrime;
 
    { Se citesc n numere natural. Pe ce pozitii se gasesc numerele prime?
  }
-var n,i,j,k :integer;
+var n,i :integer;
 a :array [1..100] of integer;
+
+function prim(n:integer): boolean;
+var k,j :integer;
+begin
+  k:=0;
+if (n<2) then
+prim := false
+else
+for j:=2 to n-1 do
+  if (n mod j = 0) then k:=k+1;
+  if (k=0) then prim:=true else prim := false;
+end;
 
 begin
 
@@ -17,18 +29,7 @@ for i:=1 to n do begin
 end;
 writeln ('Pozitiile sunt :' );
 for i:=1 to n do
- begin
-k:=0;
-if (a[i]<2) then
-begin
-     k:=1;
-     continue;
-end
-else
-for j:=2 to a[i]-1 do
-  if (a[i] mod j = 0) then k:=k+1;
-  if (k=0) then write(i,' ');
- end;
+ if(prim(a[i])) then write (i,' ');
 Readln (n);
 
 End.
