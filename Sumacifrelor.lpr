@@ -1,30 +1,34 @@
-program Sumacifrelor;
-var S ,c,n :integer;
-Begin
-   writeln('Introduceti numarul n =  ');
-   readln (n);
-   S:=0;
-   Repeat
-     c:=n mod 10;
-     n:= n div 10;
-
-     S:=S+c;
-
-
-
-
-
-   until  n=0 ;
-   writeln('Suma este ',S);
-
+program PozitiiPrime;
 
    { Se citesc n numere natural. Pe ce pozitii se gasesc numerele prime?
+ }
+var n,i,j,k :integer;
+a :array [1..100] of integer;
 
-Citește mai mult: https://infoliceu.webnode.com/clasa-a-x-a-pascal/vectori/probleme-rezolvate/}
+begin
 
+writeln('Introdu numarul n');
+readln(n);
+writeln('Introdu elementele pt tablou');
 
+for i:=1 to n do begin
+    write('a[',i,']=');
+    read(a[i]);
+end;
+writeln ('Pozitiile sunt :' );
+for i:=1 to n do
+ begin
+k:=0;
+if (a[i]<2) then
+begin
+     k:=1;
+     continue;
+end
+else
+for j:=2 to a[i]-1 do
+  if (a[i] mod j = 0) then k:=k+1;
+  if (k=0) then write(i,' ');
+ end;
+Readln (n);
 
-
-
-   Readln();
 End.
